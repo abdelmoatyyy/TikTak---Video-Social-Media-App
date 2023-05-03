@@ -12,7 +12,7 @@ import useAuthStore from "@/store/authStore";
 import removeUser from "@/store/authStore";
 
 const NavBar = () => {
-  const { userProfile, addUser, removeUser } = useAuthStore();
+  const { userProfile, addUser, removeUser }: any = useAuthStore();
   const handleSearch = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (searchValue) {
@@ -63,14 +63,14 @@ const NavBar = () => {
                   <span className="hidden md:block">Upload</span>
                 </button>
               </Link>
-              {userProfile.image && (
+              {userProfile?.image && (
                 <Link href="/">
                   <>
                     <Image
                       className="rounded-full cursor-pointer"
                       width={40}
                       height={40}
-                      src={userProfile.image}
+                      src={userProfile?.image}
                       alt="photo"
                     />
                   </>

@@ -88,9 +88,10 @@ const Search = ({ videos }: { videos: Video[] }) => {
 export const getServerSideProps = async ({
   params: { searchTerm },
 }: {
-  params: { id: string };
+  params: { searchTerm: string };
 }) => {
-  const res = await axios.get(`${BASE_URL}/api/profile/${searchTerm}`);
+  const res = await axios.get(`${BASE_URL}/api/search/${searchTerm}`);
+
   return {
     props: { videos: res.data },
   };

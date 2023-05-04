@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import axios from "axios";
-import VideoCard from "@/components/VideoCard";
-import NoResult from "@/components/NoResult";
-import { IUser, Video } from "@/types";
-import { BASE_URL } from "@/utils";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import useAuthStore from "@/store/authStore";
 import { GoVerified } from "react-icons/go";
+import Link from "next/link";
+import axios from "axios";
+
+import NoResults from "../../components/NoResult";
+import VideoCard from "../../components/VideoCard";
+import useAuthStore from "../../store/authStore";
+import { BASE_URL } from "../../utils";
+import { IUser, Video } from "../../types";
 
 const Search = ({ videos }: { videos: Video[] }) => {
   const [isAccounts, setIsAccounts] = useState(false);
@@ -22,6 +23,7 @@ const Search = ({ videos }: { videos: Video[] }) => {
   const searchedAccounts = allUsers?.filter((user: IUser) =>
     user.userName.toLowerCase().includes(searchTerm)
   );
+
   return (
     <div className="w-full  ">
       <div className="flex gap-10 mb-10 border-b-2 border-gray-200 md:fixed z-50 bg-white w-full">
@@ -67,17 +69,17 @@ const Search = ({ videos }: { videos: Video[] }) => {
               </Link>
             ))
           ) : (
-            <NoResult text={`No Account Results for ${searchTerm}`} />
+            <NoResults text={`No Account Results for ${searchTerm}`} />
           )}
         </div>
       ) : (
         <div className="md:mt-16 flex flex-wrap gap-6 md:justify-start ">
-          {videos?.length ? (
+          {videos.length ? (
             videos.map((post: Video, idx: number) => (
               <VideoCard post={post} key={idx} />
             ))
           ) : (
-            <NoResult text={`No Video Results for ${searchTerm}`} />
+            <NoResults text={`No Video Results for ${searchTerm}`} />
           )}
         </div>
       )}

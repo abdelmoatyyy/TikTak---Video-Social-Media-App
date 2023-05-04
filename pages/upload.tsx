@@ -101,7 +101,7 @@ const Upload = () => {
                         MP4 or WebM or ogg <br /> 720x1280 or higher <br /> Up
                         to 10 minutes <br /> Less than 2GB
                       </p>
-                      <p className="bg-[#f51997] text-center mt-10 rounded text-white text-md font-medium p-2 w-52 outline-none">
+                      <p className="bg-[#FC4F00] text-center mt-10 rounded text-white text-md font-medium p-2 w-52 outline-none">
                         Select File
                       </p>
                     </div>
@@ -156,7 +156,7 @@ const Upload = () => {
             <button
               onClick={handlePost}
               type="button"
-              className="bg-[#f51997] text-white border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none"
+              className="bg-[#FC4F00] text-white border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none"
             >
               Post
             </button>

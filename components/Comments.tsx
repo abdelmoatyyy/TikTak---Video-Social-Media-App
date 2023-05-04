@@ -88,7 +88,7 @@ const Comments = ({
               className="bg-primary px-6 py-4 text-md font-medium border-2 w-[250px] md:w-[700px] lg:w-[350px] border-gray-100 focus:outline-none focus:border-2 focus:border-gray-300 flex-1 rounded-lg "
             />
             <button
-              className="text-md text-white bg-[#f51997] w-[120px] rounded-xl "
+              className="text-md text-white bg-[#FC4F00] w-[120px] rounded-xl "
               onClick={addComment}
             >
               {isPostingComment ? "Commenting..." : "Comment"}

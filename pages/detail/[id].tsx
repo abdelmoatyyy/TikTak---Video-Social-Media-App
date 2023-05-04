@@ -72,7 +72,7 @@ const Detail = ({ postDetails }: Iprops) => {
 
   return (
     <div className="flex w-full absolute left-0 top-0 bg-white flex-wrap lg:flex-nowrap">
-      <div className="relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-blurred-img bg-no-repeat bg-cover bg-center ">
+      <div className="relative flex-2 w-[1000px] lg:w-9/12 flex justify-center items-center bg-black bg-no-repeat bg-cover bg-center ">
         <div className="absolute top-6 left-2 lg:left-6 flex gap-6 z-index-50">
           <p>
             <MdOutlineCancel
